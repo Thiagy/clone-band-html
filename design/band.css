@@ -9,6 +9,23 @@
 a{
     color: white;
 }
+#spinner{
+    
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+#spinner img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
 img{
     width: 100%;
 }
@@ -83,8 +100,14 @@ img{
    margin-bottom: 3vh;
 }
 main{/*div main*/
-    display: flex;
+    display: none;
     flex-direction: column;
+}
+footer{/*div footer*/
+    background-color: #647083;
+    display: none;
+    justify-content: center;
+    padding: 4vh 0;
 }
 .flex-bar-sup{
     display: flex;
@@ -498,12 +521,7 @@ main{/*div main*/
 }
 
 
-footer{/*div footer*/
-    background-color: #647083;
-    display: flex;
-    justify-content: center;
-    padding: 4vh 0;
-}
+
 .redes-sociais{
     display: flex;
     align-items: center;
