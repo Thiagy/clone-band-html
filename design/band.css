@@ -1,0 +1,577 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+a{
+    color: white;
+}
+img{
+    width: 100%;
+}
+.menu-sup{/*barra de navegação superior*/
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-sub{/*barra de navegação inferior*/
+    display: flex;
+    background-color: #AE012B;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vh;
+    position: sticky;
+    top: -1px;
+    z-index: 7;
+}
+.div-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vh;
+    padding: 1vh 2vh;
+}
+#nav_bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+}
+.litle_bar{
+    background-color: white;
+    height: 2px;  
+    width: 100%;
+}
+
+#menu-slide{/*menu slide*/
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    height: 100vh;
+    left: -100%;
+    width: 30%;
+    overflow-y: auto;
+    background-color: white;
+    transition: 1s left ease;
+    padding: 2vh;
+}
+#backdrop{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+    height: 100vh;
+    width: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+}
+.menu-logar{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 0 1vh;
+    height: 35vh;
+    border: 4px solid #F2F2F2;
+    background-color: white;
+   margin-bottom: 3vh;
+}
+main{/*div main*/
+    display: flex;
+    flex-direction: column;
+}
+.flex-bar-sup{
+    display: flex;
+    gap: 5vh;
+}
+.flex-bar-sub{
+    display: flex;
+    gap: 5vh;
+}
+.list-menu-sup{/*Lista da barra de navegação superior*/
+    display: flex;
+}
+.list-menu-sup a{
+    color: white;
+    font-size: 13px;
+    padding: 3vh 1vh;
+}
+.list-menu-sub{/*Lista da barra de navegação inferior*/
+    display: flex;
+}
+.list-menu-sup a:hover{
+    background-color: #404040;
+   transition: 0.5s;
+}
+.list-menu-sub a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    height: 100%;
+    padding: 4.3vh 1vh;
+}
+.list-menu-sub a:hover{
+    background-color: #8B0122;
+   transition: 0.5s;
+}
+
+.div-talo-pequeno{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+}
+.talo-pequeno{
+    background-color: white;
+    height: 4px;
+    width: 0.5px;
+}
+.div-shop{
+    display: none;
+    gap: 2vh;
+    padding: 0 2vh;
+}
+.div-aovivo{
+    background-color: #00000042; 
+    gap: 1vh;
+    display: flex;
+    align-items: center;
+}
+.div-aovivo img{
+    height: 16px;
+    width: 20px;
+}
+.div-aovivo-2{
+    display: none;
+    padding: 5px 0px;
+    gap: 5px;
+    color: white;
+    justify-content: center;
+    background-color: #7F0D29;
+}
+.div-log{/*div login*/
+    display: flex;
+    align-items: center;
+    gap: 1.4vh;
+    padding: 2vh 0;
+    position: relative;
+}
+.up-arrow{
+    position: absolute;
+    right: 1vh;
+    top: -10px;
+    padding: 20px;
+    background-color: white;
+    transform: rotate(45deg);
+
+}
+.div-log .logar{
+    display: none;
+}
+.div-log:hover > .logar{
+    display: none;
+}
+.logar{
+    flex-direction: column;
+    gap: 2vh;
+    padding: 0 1vh;
+    width: 50vh;
+    height: 35vh;
+    border: 4px solid #F2F2F2;
+    background-color: white;
+    position: absolute;
+    top: 11.1vh;
+    right: 3vh;
+}
+.div-log:hover > .logar{
+    display: flex;
+}
+.div-ico{
+    display: flex;
+}
+.ico{
+    display: flex;
+    gap: 0.8vh;
+    height: 100%;
+    padding: 0 2vh;
+    align-items: center;
+    font-size: 13px;
+}
+.ico:hover{
+    background-color: #ffffff1e;
+    transition: 0.5s;
+}
+.enter-button{/*Enter button login*/
+    background-color: #AE012B;
+    border: 1px solid transparent;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.enter-button:hover{
+    background-color: #ae012c9d;
+}
+.registration-button{/*registracion button login*/
+    border: 2px solid #AE012B;
+    color: #AE012B;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+.registration-button:hover{
+    border: 2px solid #ae012c9d;
+    color: #ae012c9d;
+}
+.main-enter-button{
+    color: white;
+    padding: 1vh 1.8vh;
+    border: 2px solid white;
+    background-color: #AE012B;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.menu-main{/*Barra de navegação div main*/
+    padding: 2vh 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.4vh;
+    background-color: #F2F2F2;
+}
+.menu-main a{
+    color: #24050563;
+    font-weight: bolder;
+}
+.hot-topics{
+    display: flex;
+    gap: 0.3vh;
+    color: #AE012B;
+}
+.adverts{/*div adverts*/
+    display: flex;
+    margin: 10vh auto;
+    width: 80%;
+}
+
+.container{/*div container*/
+    display: flex;
+    justify-content: space-between;
+    gap: 2vh;
+}
+
+.featured-news{/*div featured news*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    width: 60%;
+    padding:0 1vh;
+}
+.featured-news a h1{
+    color: black;
+}
+.featured-news a p{
+    color: black;
+    font-size: 24px;
+}
+
+.flex-news-box{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vh;
+    margin: 5vh 0;
+    gap: 2vh 0;
+    overflow-y: auto;
+}
+.flex-bar{/*flex bar*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1vh;
+}
+.flex-box-new{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 24%;
+}
+.flex-box-new a h5{
+    color: #AE012B;
+}
+.flex-box-new a h3{
+    color: black;
+}
+.flex-box-new ul{
+    list-style: none;
+    line-height: 22px;
+}
+.flex-box-new ul li a{
+    color: #323232;
+}
+.flex-box-new ul li::before{
+    content: '\25AA';
+    color: #AE012B;
+}
+.linha-vermelha, .linha-vermelha-overflow{
+    background-color: #AE012B;
+    margin: 2vh 0;
+    height: 4px;
+}
+
+.div-new-1{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+.div-new-1 a h5{
+    color: #AE012B;
+}
+.div-new-1 a h3{
+    color: black;
+}
+.div-new-1 ul{
+    list-style: none;
+    line-height: 22px; 
+}
+.div-new-1 ul li a{
+    color: #323232;
+}
+.div-new-1 ul li::before{
+    content: '\25AA';
+    color: #AE012B;
+}
+
+.news{
+    display: flex;
+}
+.image-news{
+    width: 30%;
+}
+.text-news{
+    width: 70%;
+    padding: 1vh;
+}
+
+.news a h5{
+    color: #AE012B;
+}
+.news a p{
+    color: #272727;
+    font-weight: bold;
+}
+
+.news-box-background-images{/*background image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 55vh;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+.div-imagem-1{
+    background-image: url("/img/noticias/criancas-para-xepa-de-vacina.png");
+}
+.div-imagem-2{
+    background-image: url("/img/noticias/ney-tem-60-anos.png");
+}
+.div-imagem-3{
+    background-image: url("/img/noticias/voleio-de-richarlison.png");
+}
+.div-imagem-4{
+    background-image: url("/img/noticias/adocante-mais-saudavel.png");
+}
+.div-imagem-text{/*text background image*/
+    color: white;
+    background-color: #AE012B;
+    padding: 1.2vh 1vh;
+}
+.div-flex-box-horoscopo{/*div horoscopo*/
+    display: flex;
+    gap: 2vh;
+    justify-content: space-between;
+    padding: 1vh 2vh;
+    background-color: #F2F2F4;
+}
+.div-flex-bar-over-flow{
+    display: flex;
+    gap: 1vh;
+    justify-content: space-between;
+}
+.horoscopo{
+   text-align: center;
+    width: 200px;
+    color: #323232;
+    font-size: 12px;
+}
+.podcast{
+    width: 218px;
+    color: #AE012B;
+    font-size: 12px;
+}
+.web-story{
+    width: 218px;
+}
+.flex-bar-schedule{/*div schedule*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 2vh;
+}
+.div-schedule-1{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 0 1vh;
+    gap: 1.5vh;
+}
+.div-schedule-2{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 0px 1vh;
+    gap: 1.5vh;
+}
+.schedule{
+    display: flex;
+    gap: 2vh;
+}
+.titulo-mais-lidas{
+    color: #AE012B;
+}
+
+.profile-box{/*journalist profile box*/
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vh 1vh;
+    padding: 1vh;
+}
+.journalist-profile-box-1{
+    display: flex;
+}
+.journalist-profile-box-2{
+    display: none;
+}
+.journalist-profile-box-3{
+    display: none;
+}
+.journalist-profile{/*journalist-profile*/
+    display: flex;
+    width:24.6%;
+    gap: 1vh;
+}
+.journalist-profile-picture{
+    width: 40%;
+}
+.image-compart{
+    height: 20px;
+    width: 20px;
+}
+.journalist-description{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 1vh;
+}
+.journalist-description a p{
+    font-weight: 600;
+    color: #272727;
+    font-size: 13px;
+}
+
+#btn_show_more{
+    text-align: center;
+    padding: 2vh 0;
+    border-radius: 4px;
+    width: 95%;
+    margin: 0 auto;
+    color: white;
+    background-color: #AE012B;
+    cursor: pointer;
+}
+
+
+footer{/*div footer*/
+    background-color: #647083;
+    display: flex;
+    justify-content: center;
+    padding: 4vh 0;
+}
+.redes-sociais{
+    display: flex;
+    align-items: center;
+    gap: 3vh;
+}
+.div-bandeirante{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    color: white; 
+}
+.div-programacao-politica-de-provacidade{
+    display: flex; 
+    gap: 1.5vh;
+}
+.linha-footer{
+    background-color: white; 
+    width: 100%;
+}
+@media (max-width: 1200px){
+    .list-menu-sub, .div-talo-pequeno, .main-enter-button, #pagseguro{
+        display: none;
+    }
+    .div-shop{
+        display: flex;
+    }
+    .flex-bar-sub{
+        width: 65%;
+    }
+    .div-menu, .adverts, .div-schedule-1, .div-schedule-2{
+        width: 100%;
+    }
+    .flex-box-new, .div-new-1, .journalist-profile{
+        width: 47%;
+    }
+    .text-2{
+        font-size: 18px;
+    }
+    .div-flex-bar-over-flow, .div-flex-box-horoscopo, .linha-vermelha-overflow{
+        width: 200%;
+    }
+}
+@media (max-width: 768px){
+    .list-menu-sup, .div-ico{
+        display: none;
+    }
+    .menu-main{
+        width: 260%;
+        justify-content: space-evenly;
+    }
+    #menu-slide{
+        width: 70%;
+    }
+    
+}
+@media (max-width: 425px){
+    .container, .news{
+        flex-direction: column;
+    }
+    .featured-news, .div-new-1, .flex-box-new, .journalist-profile, .image-news, .text-news{
+        width: 100%;
+    }
+    .div-flex-box-horoscopo, #horos-line{
+        width: 360%;
+    }
+    .div-programacao-politica-de-provacidade{
+        font-size: 12px;
+    }
+}
